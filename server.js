@@ -1,4 +1,6 @@
 require('dotenv').config(); // Carrega as variáveis do .env
+console.log("🚀 INICIANDO VERSÃO COM MONGODB...");
+// require('dotenv').config(); ... (o resto do código continua igual)
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
