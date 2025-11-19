@@ -162,14 +162,19 @@ async function enviarAtualizacao() {
     });
 }
 
-// --- BUSCA DE POKEMON ---
+// --- BUSCA DE POKEMON (PokeAPI) ---
 
 async function carregarListaPokeAPI() {
     try {
-        const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=1000');
+        // MUDANÇA AQUI: Aumentamos o limite para 10000 para pegar TUDO
+        // (Isso inclui formas regionais, megas, etc.)
+        const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=10000');
         const data = await res.json();
         listaTodosPokemons = data.results;
-    } catch (error) { console.error("Erro API Pokemon", error); }
+        console.log("Lista de Pokémon carregada:", listaTodosPokemons.length);
+    } catch (error) {
+        console.error("Erro ao carregar lista da PokeAPI:", error);
+    }
 }
 
 function abrirBuscaPokemon(slotIndex) {
