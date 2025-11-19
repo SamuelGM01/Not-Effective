@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" href="imagens/logo_servidor.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ginásios - Not Effective</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="ginasios.html" class="active">Ginásios</a>
+            <a href="treinadores.html">Treinadores</a>
+        </nav>
+    </header>
+
+    <main class="page-container">
+        <section class="content-card">
+            <h1 class="card-title">Líderes de Ginásio</h1>
+            <p class="card-description">Clique em uma insígnia para ver ou gerenciar o líder!</p>
+            <div class="badge-grid" id="grid-ginasios">
+                </div>
+        </section>
+    </main>
+
+    <div id="modal-ginasio" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <span class="close-modal" onclick="fecharModal()">&times;</span>
+            <h2 id="modal-titulo" class="card-title">Ginásio</h2>
+            
+            <div class="modal-section">
+                <img src="imagens/skin_padrao.png" id="modal-skin" class="leader-skin-preview">
+                
+                <div id="mode-create" style="display: none;">
+                    <input type="text" id="modal-input-nick" class="player-name-input" placeholder="Nick do Líder">
+                    <br>
+                    <button onclick="salvarLider()" class="btn-primary">ASSUMIR GINÁSIO</button>
+                </div>
+
+                <div id="mode-manage" style="display: none;">
+                    <h3 id="modal-leader-name" style="margin-bottom: 20px; font-family: 'Press Start 2P';">NOME</h3>
+                    <button onclick="sairDoGinasio()" class="btn-subtle">SAIR DO GINÁSIO</button>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h4 style="color: #666; margin: 20px 0 10px 0; font-size: 12px;">TIME POKÉMON</h4>
+                <div class="team-grid">
+                    <div class="poke-slot" id="slot-0" onclick="abrirBuscaPokemon(0)"></div>
+                    <div class="poke-slot" id="slot-1" onclick="abrirBuscaPokemon(1)"></div>
+                    <div class="poke-slot" id="slot-2" onclick="abrirBuscaPokemon(2)"></div>
+                    <div class="poke-slot" id="slot-3" onclick="abrirBuscaPokemon(3)"></div>
+                    <div class="poke-slot" id="slot-4" onclick="abrirBuscaPokemon(4)"></div>
+                    <div class="poke-slot" id="slot-5" onclick="abrirBuscaPokemon(5)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-busca" class="modal-overlay" style="display: none; z-index: 2000;">
+        <div class="modal-content small-modal">
+            <h3>Escolha o Pokémon</h3>
+            <input type="text" id="busca-poke-input" class="player-name-input" placeholder="Digite o nome..." onkeyup="filtrarPokemon()">
+            <div id="lista-pokemon-result" class="pokemon-list-scroll" style="background: #222; margin-top: 10px; text-align: left;"></div>
+            <button onclick="fecharBusca()" class="btn-subtle" style="margin-top: 20px;">CANCELAR</button>
+        </div>
+    </div>
+
+    <script src="script_ginasios.js"></script>
+</body>
+</html>
