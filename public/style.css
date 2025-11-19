@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+
+/* === RESET === */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+
+
+/* === CORPO === */
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    background-color: #111;
+
+    background-image: url('imagens/fundo_site.png');
+
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    background-position: center;
+
+    color: #fff;
+
+    min-height: 100vh;
+
+   
+
+    /* --- CORREÇÃO DE CENTRALIZAÇÃO --- */
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center; /* Centraliza header e main horizontalmente */
+
+}
+
+
+
+/* === HEADER === */
+
+header {
+
+    background: rgba(0, 0, 0, 0.9);
+
+    border-bottom: 1px solid #333;
+
+    padding: 25px 0;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%; /* Ocupa a tela toda */
+
+    display: flex;
+
+    justify-content: center; /* Centraliza o nav dentro do header */
+
+}
+
+
+
+nav {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 60px;
+
+    width: 100%;
+
+    max-width: 1200px; /* Limita largura em telas gigantes */
+
+}
+
+
+
+nav a {
+
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    font-size: 16px;
+
+    letter-spacing: 1px;
+
+    transition: all 0.3s ease;
+
+    position: relative;
+
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+
+
+nav a:hover, nav a.active { color: #fff; }
+
+
+
+nav a::after {
+
+    content: ''; position: absolute; width: 0; height: 3px; bottom: -8px; left: 0;
+
+    background-color: #DC143C; transition: width 0.3s;
+
+}
+
+nav a:hover::after, nav a.active::after { width: 100%; }
+
+
+
+
+
+/* === LAYOUT PRINCIPAL (Centraliza o conteúdo das páginas) === */
+
+main {
+
+    width: 100%;
+
+    max-width: 1200px; /* Limita a largura */
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center; /* Centraliza os filhos (cards, logo) */
+
+    padding: 60px 20px;
+
+    flex: 1; /* Empurra o footer para baixo se houver */
+
+}
+
+
+
+.page-container {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+
+
+
+/* === PÁGINA INICIAL === */
+
+.logo-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 70vh; /* Centraliza verticalmente */
+
+    width: 100%;
+
+}
+
+
+
+.logo-container img {
+
+    max-width: 600px;
+
+    width: 80%;
+
+    height: auto;
+
+    filter: drop-shadow(0 0 20px rgba(220, 20, 60, 0.2));
+
+    animation: floatLogo 6s ease-in-out infinite;
+
+}
+
+@keyframes floatLogo {
+
+    0%, 100% { transform: translateY(0); }
+
+    50% { transform: translateY(-20px); }
+
+}
+
+
+
+
+
+/* === CARTÃO DE CONTEÚDO (Usado em Ginásios) === */
+
+.content-card {
+
+    background: rgba(20, 20, 20, 0.95);
+
+    border: 1px solid #333;
+
+    padding: 50px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+
+   
+
+    /* --- CORREÇÃO PARA OCUPAR O CENTRO --- */
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto; /* Garante centralização */
+
+}
+
+
+
+.card-title {
+
+    font-family: 'Press Start 2P', cursive;
+
+    color: #DC143C;
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.card-description { color: #888; font-size: 14px; margin-bottom: 40px; }
+
+
+
+/* === GRID DE INSÍGNIAS === */
+
+.badge-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+    gap: 40px;
+
+    justify-items: center;
+
+}
+
+
+
+.badge-grid img {
+
+    width: 80px; height: 80px; object-fit: contain;
+
+    transition: transform 0.3s ease; cursor: pointer;
+
+    filter: grayscale(100%) brightness(0.7);
+
+}
+
+.badge-grid img:hover { transform: scale(1.2); filter: grayscale(0%) brightness(1.2); }
+
+
+
+
+
+/* === TREINADORES (Centralização da Lista) === */
+
+#lista-treinadores {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center; /* Centraliza os cards */
+
+}
+
+
+
+.player-card {
+
+    background: #1a1a1a;
+
+    border: 1px solid #333;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    position: relative;
+
+   
+
+    /* --- CORREÇÃO DE LARGURA --- */
+
+    width: 100%;
+
+    max-width: 1000px; /* Segue o padrão do content-card */
+
+}
+
+
+
+.player-skin { width: 80px; height: 80px; border-radius: 4px; border: 2px solid #333; margin-right: 25px; flex-shrink: 0; }
+
+.player-info { flex-grow: 1; }
+
+.player-info h3 { font-family: 'Press Start 2P', cursive; font-size: 16px; color: #fff; margin-bottom: 15px; text-align: left; }
+
+
+
+/* Insígnias na barra do treinador */
+.badge-bar {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr); /* 9 colunas de tamanho igual */
+    gap: 5px; /* Espaço entre as insígnias */
+    width: 100%; /* IMPORTANTE: Força a barra a ocupar toda a largura disponível */
+    justify-items: center; /* Centraliza cada insígnia dentro do seu espaço */
+    margin-top: 10px; /* Um pequeno espaço entre o nome e as insígnias */
+}
+
+.badge-bar img {
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer; 
+    transition: all 0.2s;
+    object-fit: contain;
+}
+
+.badge-obscured { 
+    opacity: 0.2; 
+    filter: grayscale(100%); 
+}
+
+.badge-bar img:not(.badge-obscured):hover { 
+    transform: scale(1.2); 
+}
+
+/* Ajuste responsivo para celulares (opcional, mas recomendado) */
+@media (max-width: 600px) {
+    .badge-bar {
+        grid-template-columns: repeat(6, 1fr); /* Em telas pequenas, usa 6 colunas */
+    }
+}
+
+
+
+
+/* === BOTÕES E MODAIS === */
+
+.btn-delete { position: absolute; top: 15px; right: 15px; background: none; border: none; color: #444; font-weight: bold; font-family: Arial; cursor: pointer; font-size: 18px; }
+
+.btn-delete:hover { color: #DC143C; }
+
+
+
+.add-card-container {
+
+    border: 2px dashed #777; background-color: rgba(0, 0, 0, 0.4);
+
+    display: flex; justify-content: center; align-items: center; padding: 20px;
+
+    width: 100%; max-width: 1000px;
+
+}
+
+.input-group-centered { display: flex; align-items: center; justify-content: center; gap: 15px; width: 100%; }
+
+
+
+/* --- NOVAS REGRAS DE ESTILIZAÇÃO PARA INPUTS DE TEXTO --- */
+
+/* Estilo geral para todos os inputs de texto */
+
+input[type="text"] {
+
+    background-color: transparent; /* Fundo transparente */
+
+    border: none;
+
+    border-bottom: 2px solid #DC143C; /* Linha vermelha embaixo */
+
+    color: #fff; /* Texto branco */
+
+    font-family: 'Press Start 2P', cursive; /* Fonte do jogo */
+
+    font-size: 14px;
+
+    padding: 10px;
+
+    text-align: center;
+
+    outline: none; /* Remove a borda de foco padrão do navegador */
+
+    width: 280px; /* Largura padrão */
+
+    transition: border-color 0.3s ease; /* Transição suave */
+
+}
+
+
+
+input[type="text"]::placeholder {
+
+    color: #888; /* Cor do placeholder */
+
+    opacity: 0.7; /* Mais transparente */
+
+    font-size: 12px; /* Tamanho um pouco menor para o placeholder */
+
+}
+
+
+
+input[type="text"]:focus {
+
+    border-color: #fff; /* Borda branca ao focar */
+
+}
+
+
+
+/* Para o input de "Novo Jogador..." no treinadores.html */
+
+.clean-input { /* Já existe, só adiciona as propriedades acima */ }
+
+
+
+/* Para o input de "Nick do Líder" no modal de Ginásio */
+
+.player-name-input { /* Já existe, só adiciona as propriedades acima */
+
+    margin-bottom: 15px; /* Espaçamento extra abaixo, se necessário */
+
+}
+
+
+
+/* === BOTÃO DE ROUND PLUS (JÁ EXISTENTE, SEM ALTERAÇÃO) === */
+
+.btn-round-plus { width: 45px; height: 45px; border-radius: 50%; background: #DC143C; color: #fff; border: none; font-size: 30px; font-family: Arial; font-weight: bold; display: flex; justify-content: center; align-items: center; cursor: pointer; padding-bottom: 4px; min-width: 45px; }
+
+
+
+
+
+/* Modal */
+
+.modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 2000; display: flex; justify-content: center; align-items: center; backdrop-filter: blur(5px); }
+
+.modal-content { background: #111; border: 1px solid #333; padding: 40px; width: 650px; max-width: 90%; text-align: center; position: relative; box-shadow: 0 0 40px rgba(220,20,60,0.1); }
+
+.close-modal { position: absolute; top: 20px; right: 20px; color: #555; font-size: 24px; cursor: pointer; }
+
+.leader-skin-preview { width: 100px; height: 100px; border: 2px solid #333; margin-bottom: 20px; }
+
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px; }
+
+.poke-slot { background: #1a1a1a; border: 1px solid #333; height: 90px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; position: relative; }
+
+.poke-slot:hover { border-color: #DC143C; }
+
+.poke-slot img { max-width: 80%; max-height: 60%; object-fit: contain; image-rendering: pixelated; }
+
+.btn-remove-poke { position: absolute; top: 2px; right: 5px; color: #444; background: none; border: none; cursor: pointer; font-size: 12px; }
+
+.btn-remove-poke:hover { color: #DC143C; }
+
+
+
+.btn-save, .btn-primary { background: #DC143C; color: #fff; padding: 12px 25px; border: none; font-family: 'Montserrat', sans-serif; font-weight: 700; cursor: pointer; text-transform: uppercase; }
+
+.btn-subtle { background: transparent; border: 1px solid #333; color: #666; padding: 8px 20px; margin-top: 15px; cursor: pointer; font-family: 'Montserrat'; font-size: 11px; }
+
+.btn-subtle:hover { border-color: #DC143C; color: #DC143C; }
+
+.pokemon-list-scroll { max-height: 300px; overflow-y: auto; margin-top: 10px; text-align: left; background: #222; border: 1px solid #555; }
+
+.poke-result-item { padding: 15px; border-bottom: 1px solid #444; cursor: pointer; font-family: 'Press Start 2P'; font-size: 12px; color: #FFF; transition: background-color 0.2s; }
+
+.poke-result-item:hover { background-color: #DC143C; color: #FFF; }
+
+.btn-close-red { background: #555; color: white; border: none; padding: 10px; margin-top: 15px; cursor: pointer; font-family: 'Press Start 2P'; width: 100%; }
+

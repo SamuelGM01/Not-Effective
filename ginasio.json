@@ -1,0 +1,20 @@
+{
+  "agua": { "lider": "", "time": [null, null, null, null, null, null] },
+  "dragao": { "lider": "", "time": [null, null, null, null, null, null] },
+  "eletrico": { "lider": "", "time": [null, null, null, null, null, null] },
+  "fada": { "lider": "", "time": [null, null, null, null, null, null] },
+  "fantasma": { "lider": "", "time": [null, null, null, null, null, null] },
+  "fogo": { "lider": "", "time": [null, null, null, null, null, null] },
+  "gelo": { "lider": "", "time": [null, null, null, null, null, null] },
+  "inseto": { "lider": "", "time": [null, null, null, null, null, null] },
+  "lutador": { "lider": "", "time": [null, null, null, null, null, null] },
+  "metalico": { "lider": "", "time": [null, null, null, null, null, null] },
+  "normal": { "lider": "", "time": [null, null, null, null, null, null] },
+  "pedra": { "lider": "", "time": [null, null, null, null, null, null] },
+  "planta": { "lider": "", "time": [null, null, null, null, null, null] },
+  "psiquico": { "lider": "", "time": [null, null, null, null, null, null] },
+  "sombrio": { "lider": "", "time": [null, null, null, null, null, null] },
+  "terra": { "lider": "", "time": [null, null, null, null, null, null] },
+  "venenoso": { "lider": "", "time": [null, null, null, null, null, null] },
+  "voador": { "lider": "", "time": [null, null, null, null, null, null] }
+}

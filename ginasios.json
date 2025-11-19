@@ -1,0 +1,53 @@
+{
+  "agua": {
+    "lider": "",
+    "time": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "metalico": {
+    "lider": "CorazonS2",
+    "time": [
+      {
+        "nome": "SCIZOR",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/212.gif"
+      },
+      {
+        "nome": "AEGISLASH-SHIELD",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/681.png"
+      },
+      {
+        "nome": "EXCADRILL",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/530.gif"
+      },
+      {
+        "nome": "CORVIKNIGHT",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/823.png"
+      },
+      {
+        "nome": "KINGAMBIT",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/983.png"
+      },
+      {
+        "nome": "ZACIAN",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/888.png"
+      }
+    ]
+  },
+  "fogo": {
+    "lider": "",
+    "time": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  }
+}
